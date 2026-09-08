@@ -54,7 +54,7 @@ Long records are chunked. Chunks are embedded and written in batches. Source has
 
 ## Option A: Run with Docker (recommended)
 
-Install Docker Desktop first, then run these commands from this project folder.
+Install Docker Desktop first and make sure it is open and running, then run these commands from this project folder.
 
 1. Create the environment file:
 
