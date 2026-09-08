@@ -1,0 +1,7 @@
+[server]
+# Transformers exposes many optional modules through lazy imports. Streamlit's
+# source watcher introspects every loaded module and accidentally imports optional
+# vision modules, producing a large number of misleading `torchvision` errors.
+# This application runs in Docker and does not need hot-reload file watching.
+fileWatcherType = "none"
+runOnSave = false

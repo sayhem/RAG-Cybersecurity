@@ -1,0 +1,38 @@
+{
+  "name": "Cybersecurity RAG Development",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "root",
+  "containerEnv": {
+    "CHROMA_PATH": "/workspace/chroma_db",
+    "PYTHONPATH": "/workspace"
+  },
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Cybersecurity RAG Streamlit",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "test -f .env || cp .env.example .env",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
+

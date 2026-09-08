@@ -1,0 +1,10 @@
+crewai[google-genai,tools]>=1.15,<2
+chromadb>=1.0,<2
+sentence-transformers>=5.0,<6
+pymupdf>=1.26,<2
+pandas>=2.2,<4
+openpyxl>=3.1,<4
+streamlit>=1.49,<2
+python-dotenv>=1.1,<2
+pydantic>=2.11,<3
+

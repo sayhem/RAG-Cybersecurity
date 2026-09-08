@@ -1,0 +1,28 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated RAG database
+chroma_db/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+*.swp
+
+# Logs and temporary files
+*.log
+*.tmp

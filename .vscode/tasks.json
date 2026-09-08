@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "RAG: Ingest documents",
+      "type": "shell",
+      "command": "uv run --no-sync python ingest.py",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "RAG: Start Streamlit",
+      "type": "shell",
+      "command": "uv run --no-sync streamlit run app.py --server.address=0.0.0.0 --server.port=8501",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
+

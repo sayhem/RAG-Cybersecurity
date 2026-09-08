@@ -1,0 +1,13 @@
+services:
+  cybersecurity-rag:
+    build: .
+    ports:
+      - "127.0.0.1:8501:8501"
+    env_file:
+      - .env
+    environment:
+      CHROMA_PATH: /app/chroma_db
+    volumes:
+      - ./data:/app/data:ro
+      - ./chroma_db:/app/chroma_db
+
